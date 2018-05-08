@@ -1,0 +1,34 @@
+body{
+	margin:0;
+	padding:0;
+	background-color:#EEE;
+	font-family:arial;
+}
+.container{
+	padding:2px;
+	width:800px;
+	border:2px solid black;
+	margin:auto;
+}
+table{
+	width:800px;
+	margin:auto;
+}
+tr{
+	border:2px solid black;
+}
+th{
+	border:2px solid black
+}
+.desc{
+	width:450px;
+}
+.valor{
+	width:80px;
+}
+.numero{
+	width:50px;
+}
+.data{
+	width:50px;
+}
