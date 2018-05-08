@@ -11,9 +11,9 @@
 	<div class="container">
 		<table>
 			<tr>
-				<th class="numero">Nº</th>
+				<th class="numero">NÂº</th>
 				<th class="data">Data</th>
-				<th class="desc">Descrição</th>
+				<th class="desc">DescriÃ§Ã£o</th>
 				<th class="paciente">Paciente</th>
 				<th class="valor">Valor</th>
 			</tr>

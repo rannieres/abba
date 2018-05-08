@@ -19,7 +19,7 @@
 			</tr>
 			<?php
 			$data = $_POST('data');
-			$dentista = array_values($_POST('dentista'));
+			$dentista = array_values($_POST['dentista']);
 			$sql = "SELECT * FROM fechamento WHERE ano = '&data' AND cliente = '$dentista' ";
 			$sql = $pdo->query($sql);
 			if($sql->rowCount() > 0){
