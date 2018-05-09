@@ -20,6 +20,7 @@
 			</tr>
 			<?php
 			require 'config.php';
+			$total = 0;
 			if(isset($_POST['ano']) && isset($_POST['mes']) && isset($_POST['dentista']) && empty($_POST['ano']) == false && empty($_POST['mes']) == false && empty($_POST['dentista']) == false) {
 				$ano = $_POST['ano'];
 				$mes = $_POST['mes'];
@@ -35,8 +36,10 @@
 						echo $info['ano'].'</td>';
 						echo '<td>'.$info['descricao'].'</td>';
 						echo '<td>'.$info['paciente'].'</td>';
-						echo '<td>'.$info['valor'].'</td>';
+						echo '<td class="valor">'.$info['valor'].'</td>';
 						echo '</tr>';
+						$total = $total + $info['valor'];
+						$total = number_format($total, 2, '.', '');
 					}
 				}else{
 					echo '<tr><td colspan="5">Nenhum dado encontrado</td></tr>';
@@ -45,6 +48,7 @@
 				header("Location: index.php");
 			}
 			?>
+			<?php echo '<tr><td colspan="4" class="total right">Total:</td><td class="valor total">'.$total.'</td></tr>' ;?>
 		</table>
 		
 	</div>
