@@ -9,6 +9,7 @@
 		require 'config.php';
 	?>
 	<div class="container">
+		<a href="index.php"><button class="add">atualizar</button></a>
 		<table>
 			<tr>
 				<th class="numero">Nº</th>
@@ -16,6 +17,7 @@
 				<th class="desc">Descrição</th>
 				<th class="paciente">Paciente</th>
 				<th class="valor">Valor</th>
+				<th class="clinica">Clinica</th>
 			</tr>
 			<?php
 			$sql = "SELECT * FROM fechamento";
@@ -23,13 +25,14 @@
 			if($sql->rowCount() > 0){
 				foreach($sql -> fetchAll() as $info){
 					echo '<tr>';
-					echo '<td>'.$info['numero'].'</td>';
+					echo '<td class="centro">'.$info['numero'].'</td>';
 					echo '<td>'.$info['dia'].'/';
 					echo $info['mes'].'/';
 					echo $info['ano'].'</td>';
 					echo '<td>'.$info['descricao'].'</td>';
 					echo '<td>'.$info['paciente'].'</td>';
-					echo '<td>'.$info['valor'].'</td>';
+					echo '<td class="centro">'.$info['valor'].'</td>';
+					echo '<td>'.$info['cliente'].'</td>';
 					echo '</tr>';
 				}
 			}else{
@@ -39,8 +42,9 @@
 		</table>
 		
 	</div>
-	<div class='container'>
-		<form method="POST" action="busca.php">
+	<div class='container busca'>
+		<form method="POST" action="busca.php" class="campodebusca">
+			Clinica: 
 			<select name="dentista">
 				<?php
 				$sql = "SELECT * FROM clientes";
@@ -55,7 +59,22 @@
 				?>
 
 			</select>
-			<select name="data">
+			Data:
+			<select name="mes">
+				<option value="01">Janeiro</option>
+				<option value="02">Fevereiro</option>
+				<option value="03">Março</option>
+				<option value="04">Abril</option>
+				<option value="05">Maio</option>
+				<option value="06">Junho</option>
+				<option value="07">Julho</option>
+				<option value="08">Agosto</option>
+				<option value="09">Setembro</option>
+				<option value="10">Outubro</option>
+				<option value="11">Novembro</option>
+				<option value="12">Dezembro</option>
+			</select>
+			<select name="ano">
 				<option value="2018">2018</option>
 				<option value="2019">2019</option>
 				<option value="2020">2020</option>
@@ -68,10 +87,11 @@
 				<option value="2027">2027</option>
 				<option value="2028">2028</option>
 				<option value="2029">2029</option>
-				<option value="2030">2030</option>*/
+				<option value="2030">2030</option>
 			</select>
 			<input type="submit" value="Buscar">
 		</form>
+		<a href="index.php"><button class="add">atualizar</button></a>
 	</div>
 </body>
 </html>

@@ -1,17 +1,20 @@
 body{
 	margin:0;
-	padding:0;
+	padding:10px;
 	background-color:#EEE;
 	font-family:arial;
 }
 .container{
 	padding:2px;
-	width:800px;
+	width:900px;
 	border:2px solid black;
 	margin:auto;
 }
+.centro{
+	text-align:center;
+}
 table{
-	width:800px;
+	width:900px;
 	margin:auto;
 }
 tr{
@@ -25,10 +28,41 @@ th{
 }
 .valor{
 	width:80px;
+	text-align:center;
 }
 .numero{
 	width:50px;
 }
 .data{
 	width:50px;
+}
+.clinica{
+	width:100px;
+}
+.busca{
+	height:30px;
+	line-height:30px;
+	margin-top:10px;
+}
+.add{
+	width:100%;
+}
+/*busca.php*/
+.nomedentista{
+	width:896px;
+	height:30px;
+	border:2px solid black;
+}
+.nomedent ,
+.datam{
+	height:30px;
+	line-height:30px;
+	padding-left:20px;
+	padding-right:20px;
+}
+.nomedent{
+	float:left;
+}
+.datam{
+	float:right;
 }
