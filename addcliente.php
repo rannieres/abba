@@ -1,3 +1,9 @@
+<html>
+<head>
+	<title>Laboratorio Abba</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+<body>
 <?php 
 	require 'config.php';
 	if (isset($_POST['cliente']) && !empty($_POST['cliente'])) {
@@ -12,3 +18,4 @@
 	<input type="text" name="cliente"><br/><br/>
 	<input type="submit" value="Enviar">
 </form>
+</body>

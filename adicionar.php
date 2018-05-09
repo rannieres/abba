@@ -1,4 +1,10 @@
-<?php
+<html>
+<head>
+	<title>Laboratorio Abba</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+<body>
+	<?php
 	require 'config.php';
 	if(isset($_POST['dia']) && isset($_POST['mes']) && isset($_POST['ano']) && isset($_POST['descricao']) && isset($_POST['valor']) && isset($_POST['cliente']) && empty($_POST['dia']) == false && empty($_POST['mes']) == false && empty($_POST['ano']) == false && empty($_POST['descricao']) == false && empty($_POST['valor']) == false && empty($_POST['cliente']) == false ){
 		$numero = $_POST['numero'];
@@ -98,3 +104,4 @@
 	</select><br/><br/>
 	<input type="submit" value="Enviar" />
 </form>
+</body>

@@ -1,4 +1,9 @@
-<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+<html>
+<head>
+	<title>Laboratorio Abba</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+<body>
 <div class="corpocliente">
 	Clientes:<br/>
 <?php
@@ -14,3 +19,4 @@
 	}
 ?>
 </div>
+</body>

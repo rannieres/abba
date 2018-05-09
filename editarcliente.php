@@ -1,3 +1,9 @@
+<html>
+<head>
+	<title>Laboratorio Abba</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+<body>
 <?php
 	require 'config.php';
 	$id=0;
@@ -23,3 +29,4 @@
 	<input type="text" name="cliente" value="<?php echo $dado['cliente']; ?>" /><br/><br/>
 	<input type="submit" value="Atualizar" />
 </form>
+</body>
