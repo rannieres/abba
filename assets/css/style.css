@@ -1,12 +1,12 @@
 body{
 	margin:0;
 	padding:10px;
-	background-color:#EEE;
+	background-color:#ccc;
 	font-family:arial;
 }
 .container{
 	padding:2px;
-	width:900px;
+	width:1000px;
 	border:2px solid black;
 	margin:auto;
 }
@@ -14,7 +14,7 @@ body{
 	text-align:center;
 }
 table{
-	width:900px;
+	width:1000px;
 	margin:auto;
 }
 tr{
@@ -25,6 +25,7 @@ th{
 }
 .desc{
 	width:450px;
+	overflow:hidden;
 }
 .valor{
 	width:80px;
@@ -44,10 +45,13 @@ th{
 	line-height:30px;
 	margin-top:10px;
 }
+.blank{
+	width:50px;
+}
 .add{
 	width:100%;
 }
-iframe{
+.iframeadicionar{
 	width:200px;
 	height:450px;
 	position:fixed;
@@ -57,10 +61,20 @@ iframe{
 	border:2px solid black;
 	padding:10px;
 }
+.iframenovocliente{
+	width:300px;
+	height:150px;
+	position:fixed;
+	top:0;
+	left:0;
+	margin:10px;
+	border:2px solid black;
+	padding:10px;
+}
 
 /*busca.php*/
 .nomedentista{
-	width:896px;
+	width:996px;
 	height:30px;
 	border:2px solid black;
 }
@@ -83,4 +97,19 @@ iframe{
 .right{
 	text-align:right;
 	padding-right:10px;
+}
+/*clientes.php*/
+
+.listacl{
+	height:30px;
+	width:250px;
+	line-height:30px;
+	background-color:yellow;
+}
+.listlink{
+	float:left;
+	height:30px;
+	line-height:30px;
+	background-color:yellow;
+	margin-right:10px;
 }

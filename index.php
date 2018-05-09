@@ -9,7 +9,7 @@
 		require 'config.php';
 	?>
 	<div class="container">
-		<a href="index.php"><button class="add">atualizar</button></a>
+		<a href="index.php"><button class="add">Atualizar Página</button></a>
 		<table>
 			<tr>
 				<th class="numero">Nº</th>
@@ -18,9 +18,10 @@
 				<th class="paciente">Paciente</th>
 				<th class="valor">Valor</th>
 				<th class="clinica">Clinica</th>
+				<th class="blank"></th>
 			</tr>
 			<?php
-			$sql = "SELECT * FROM fechamento";
+			$sql = "SELECT * FROM fechamento ORDER BY id DESC";
 			$sql = $pdo->query($sql);
 			if($sql->rowCount() > 0){
 				foreach($sql -> fetchAll() as $info){
@@ -33,6 +34,7 @@
 					echo '<td>'.$info['paciente'].'</td>';
 					echo '<td class="centro">'.$info['valor'].'</td>';
 					echo '<td>'.$info['cliente'].'</td>';
+					echo '<td><a href="editar.php?id='.$info['id'].'"><button>Editar</button></a></td>' ;
 					echo '</tr>';
 				}
 			}else{
@@ -43,11 +45,11 @@
 		
 	</div>
 	<div class='container busca'>
-		<form method="POST" action="busca.php" class="campodebusca">
+		<form method="POST" action="busca.php" class="campodebusca" target="_blank" />
 			Clinica: 
 			<select name="dentista">
 				<?php
-				$sql = "SELECT * FROM clientes";
+				$sql = "SELECT cliente FROM fechamento GROUP BY cliente";
 				$sql = $pdo->query($sql);
 				if($sql->rowCount() > 0){
 					foreach($sql -> fetchAll() as $clientes){ 
@@ -89,10 +91,14 @@
 				<option value="2029">2029</option>
 				<option value="2030">2030</option>
 			</select>
-			<input type="submit" value="Buscar">
+			<input type="submit" value="Buscar" target="_blank" />
 		</form>
-		<a href="index.php"><button class="add">atualizar</button></a>
+		<a href="index.php"><button class="add">Atualizar Página</button></a>
 	</div>
-	<iframe src="adicionar.php"></iframe>
+	<iframe src="adicionar.php" class="iframeadicionar"></iframe>
+	<iframe src="addcliente.php" class="iframenovocliente"></iframe>
+	<div class="listacliente">
+		
+	</div>
 </body>
 </html>

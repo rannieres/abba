@@ -1,9 +1,11 @@
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Laboratorio Abba</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-</head>
+<?php
+	echo '<html>';
+	echo '<head>';
+	echo	'<meta charset="utf-8">';
+	echo	'<title>'.'Fechamento '.$_POST['dentista'].' => '.$_POST['mes'].'/'.$_POST['ano'].'</title>';
+	echo	'<link rel="stylesheet" type="text/css" href="assets/css/style.css" />';
+	echo '</head>';
+?>
 <body>
 	<div class="container">
 		<div class="nomedentista">
@@ -30,13 +32,13 @@
 				if($sql->rowCount() > 0){
 					foreach($sql -> fetchAll() as $info){
 						echo '<tr>';
-						echo '<td>'.$info['numero'].'</td>';
-						echo '<td>'.$info['dia'].'/';
+						echo '<td class="centro">'.$info['numero'].'</td>';
+						echo '<td class="centro">'.$info['dia'].'/';
 						echo $info['mes'].'/';
 						echo $info['ano'].'</td>';
 						echo '<td>'.$info['descricao'].'</td>';
 						echo '<td>'.$info['paciente'].'</td>';
-						echo '<td class="valor">'.$info['valor'].'</td>';
+						echo '<td class="valor">R$ '.$info['valor'].'</td>';
 						echo '</tr>';
 						$total = $total + $info['valor'];
 						$total = number_format($total, 2, '.', '');
@@ -48,7 +50,7 @@
 				header("Location: index.php");
 			}
 			?>
-			<?php echo '<tr><td colspan="4" class="total right">Total:</td><td class="valor total">'.$total.'</td></tr>' ;?>
+			<?php echo '<tr><td colspan="4" class="total right">Total:</td><td class="valor total">R$ '.$total.'</td></tr>' ;?>
 		</table>
 		
 	</div>
