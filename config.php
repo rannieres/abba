@@ -1,4 +1,3 @@
-<meta charset="utf-8">
 <?php
 $dns = "mysql:dbname=ficha;host=localhost";
 $dbuser = "rannieres";

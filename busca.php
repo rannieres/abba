@@ -2,7 +2,7 @@
 	echo '<html>';
 	echo '<head>';
 	echo	'<meta charset="utf-8">';
-	echo	'<title>'.'Fechamento '.$_POST['dentista'].' => '.$_POST['mes'].'/'.$_POST['ano'].'</title>';
+	echo	'<title>'.'Fechamento '.$_POST['dentista'].' - '.$_POST['mes'].'/'.$_POST['ano'].'</title>';
 	echo	'<link rel="stylesheet" type="text/css" href="assets/css/style.css" />';
 	echo '</head>';
 ?>
@@ -14,9 +14,9 @@
 		</div>
 		<table>
 			<tr>
-				<th class="numero">Nº</th>
+				<th class="numero">NÂº</th>
 				<th class="data">Data</th>
-				<th class="desc">Descrição</th>
+				<th class="desc">DescriÃ§Ã£o</th>
 				<th class="paciente">Paciente</th>
 				<th class="valor">Valor</th>
 			</tr>
