@@ -49,7 +49,7 @@
 			Clinica: 
 			<select name="dentista">
 				<?php
-				$sql = "SELECT cliente FROM fechamento GROUP BY cliente";
+				$sql = "SELECT cliente FROM clientes GROUP BY cliente";
 				$sql = $pdo->query($sql);
 				if($sql->rowCount() > 0){
 					foreach($sql -> fetchAll() as $clientes){ 
@@ -97,8 +97,6 @@
 	</div>
 	<iframe src="adicionar.php" class="iframeadicionar"></iframe>
 	<iframe src="addcliente.php" class="iframenovocliente"></iframe>
-	<div class="listacliente">
-		
-	</div>
+	<iframe src="clientes.php" class="iframeclientes"></iframe>
 </body>
 </html>

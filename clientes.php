@@ -1,8 +1,9 @@
 <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 <div class="corpocliente">
+	Clientes:<br/>
 <?php
 	require 'config.php';
-	$sql = "SELECT * FROM clientes ORDER BY cliente DESC";
+	$sql = "SELECT * FROM clientes ORDER BY cliente ASC";
 	$sql = $pdo->query($sql);
 	if($sql->rowCount() > 0){
 		foreach($sql -> fetchAll() as $info){
@@ -12,4 +13,4 @@
 		echo "Nenhum dado encontrado";
 	}
 ?>
-</div>3
+</div>
