@@ -93,5 +93,6 @@
 		</form>
 		<a href="index.php"><button class="add">atualizar</button></a>
 	</div>
+	<iframe src="adicionar.php"></iframe>
 </body>
 </html>

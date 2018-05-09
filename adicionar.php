@@ -8,6 +8,9 @@
 		$descricao = $_POST['descricao'];
 		$valor = $_POST['valor'];
 		$cliente = $_POST['cliente'];
+		$sql = "INSERT INTO  fechamento SET numero = '$numero', dia ='$dia', mes = '$mes', ano = 'ano', descricao = '$descricao', valor = '$valor', cliente = '$cliente' ";
+		$pdo = query($sql);
+		header("Location:adicionar.php");
 	}
 ?>
 <form method="POST">
@@ -79,7 +82,7 @@
 	Descrição:<br/>
 	<input type="text" name="descricao" required/><br/><br/>
 	Paciente:<br/>
-	<input type="number" name="valor" required/><br/><br/>
+	<input type="text" name="valor" required/><br/><br/>
 	Cliente:<br/>
 	<select name="cliente">
 		<?php
